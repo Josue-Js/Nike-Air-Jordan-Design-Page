@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-white: #FFFFFF;
+    --color-bg-opacity: #00000080;
+    --color-bg: #F6F6F6;
+    --color-border: #CBCBCB;
+    --color-text: #131212;
+    --color-text-2: #13121280;
+    --color-notification: #FF0000;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+
+*, button, p, input {
+    font-family: "Inter", sans-serif;
+    color: var(--color-text);
+}
+
+svg {
+    cursor: pointer;
+}

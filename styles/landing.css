@@ -1,0 +1,407 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 1.5rem 1rem 0;
+}
+
+/* HEADER
+---------------------------------------------- */
+.container .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .header .logo object {
+    width: 45px;
+    height: 22px;
+}
+
+.container  .header .navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: var(--color-bg-opacity);
+}
+
+.container .header .navbar.open {
+    display: block;
+}
+
+.container .header .navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: fit-content;
+    margin-left: auto;
+    padding: 2rem 2rem 0;
+    height: 100%;
+    background: var(--color-white);
+}
+
+.container .header  .navbar ul li {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    list-style: none;
+    cursor: pointer;
+}
+
+.container .header  .navbar ul li:hover {
+    text-decoration: underline;
+}
+
+.container .header .rightContent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.container .header .rightContent .shopping-bag {
+    position: relative;
+}
+
+.container .header .rightContent .shopping-bag::before {
+    content: "2";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -10px;
+    right: -10px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-notification);
+    color: var(--color-white);
+}
+
+.container .header .rightContent > div img {
+    cursor: pointer;
+}
+/* SHOES
+---------------------------------------------- */
+ 
+.container main {
+    position: relative;
+    flex: 1;
+    height: max-content;
+    margin-top: 1.5rem;
+    padding-bottom: 8rem;
+}
+
+
+/* SHOE-DETAILS
+---------------------------------------------- */
+.container main .shoe-details h4 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.container main .shoe-details h1 {
+    font-family: "Saira Condensed", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container main .shoe-details p {
+    max-width: 720px;
+    font-size: 1rem;
+    color: var(--color-text-2);
+}
+
+.container main .shoe-details .video {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.container main .shoe-details .video img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.container main .shoe-details .video span {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem;
+    cursor: pointer;
+}
+
+.container main .shoe3d {
+    width: 100%;
+    flex: 1;
+    flex-shrink: 1;
+    max-width: 900px;
+    height: calc(59vw - 3rem);
+    max-height: 564px;
+}
+
+/* MEDIA-SOCIAL
+---------------------------------------------- */
+.container main .media-social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.container main .media-social img {
+    cursor: pointer;
+}
+
+
+
+/* SHOES-VARIATIONS
+---------------------------------------------- */
+.container main .variations {
+    display: flex;
+    flex-direction: column;
+    max-width: 345px;
+    gap: 1rem;
+}
+
+.container main .variations .wrapper-colors h1, .wrapper-sizes h1 {
+    font-size: 'Saira Condensed', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.container main .variations .wrapper-colors .colors {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.container main .variations .wrapper-colors .colors span {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.container main .variations .wrapper-colors .colors span:hover {
+    border: 1px solid #000;
+}
+
+.container main .variations .wrapper-sizes .sizes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.container main .variations .wrapper-sizes .sizes span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+}
+
+.container main .variations .wrapper-sizes .sizes span:hover {
+    border: 1px solid var(--color-text-2);
+}
+
+
+/* SHOES-VARIATIONS
+---------------------------------------------- */
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+}
+
+.footer h2 {
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.footer .controls {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer .controls .next, .prev {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 0.75rem;
+   cursor: pointer;
+}
+
+.footer .controls .next span, .prev span {
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* MEDIA QUERY 
+---------------------------------------------- */
+@media (min-width: 768px) {
+
+    .container {
+        padding: 2.5rem 1rem 0;
+    }
+
+    .container main {
+        margin-top: 4rem;
+        padding-bottom: 0;
+    }
+
+    .container .header .logo object {
+        width: 98px;
+        height: 34px;
+    }
+
+    .container .header .rightContent .menu {
+        display: none;
+    }
+
+    .container  .header .navbar {
+        display: initial;
+        position: relative;
+        background: transparent;
+    }
+
+
+    .container .header .navbar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+        background: transparent;
+    }
+
+    .container .header  .navbar ul li {
+        font-weight: 700;
+    }
+
+    .container main .shoe-details {
+        position: relative;
+        max-width: 270px;
+    }
+    .container main .shoe-details h4 {
+        font-size: 1.5rem;
+    }
+
+    .container main .shoe-details h1 {
+        font-size: 3.5rem;
+        width: 700px;
+    }
+
+    .container main .shoe-details p {
+        font-size: 1.25rem;
+        width: 600px;
+    }
+
+    .footer {
+        position: initial;
+    }
+    .footer h2 {
+        font-size: 1.5rem;
+    }
+    .footer .controls .next span, .prev span {
+        font-family: 'Saira Condensed', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+}
+
+
+@media (min-width: 1080px) {
+
+    .container main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .header .navbar ul {
+        gap: 3.5rem;
+    }
+ 
+    .container main .shoe {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .container main .shoe-details p {
+        max-width: 350px;
+    }
+
+    .container main .shoe-details .video span {
+        font-size: 1.5rem;
+    }
+
+    .container main .shoe3d {
+        height: calc((100vw - 270px - 376px) * 564 / 900);
+        max-height: 564px;
+    }
+
+    .container main .shoe3d canvas {
+        width: 100% !important;
+    }
+
+    .container main .media-social {
+        position: absolute;
+        flex-direction: column;
+        right: 0;
+        bottom: 15px;
+    }
+
+    .container main .variations {
+        flex-direction: column-reverse;
+        gap: 2.5rem;
+    }
+
+   
+
+}
+
+
+@media (min-width: 1280px) {
+
+
+    .container main .shoe-details h1 {
+        font-size: 4.5rem;
+    }
+
+    .container main .shoe-details p {
+        max-width: 520px;
+        font-size: 1.5rem;
+    }
+
+    .container main .variations .wrapper-sizes .sizes span {
+        width: 56px;
+        height: 56px;
+    }
+}
