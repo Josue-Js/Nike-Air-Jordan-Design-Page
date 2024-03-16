@@ -1,7 +1,7 @@
 # Nike Air Jordan Design Page
 <br/>
 
-[Demo do projeto]([https://buying-plane-ticket.vercel.app](https://josue-js.github.io/Nike-Air-Jordan-Design-Page/)
+[Demo do projeto](https://josue-js.github.io/Nike-Air-Jordan-Design-Page/)
 
 ![image](/assets/screenshot.png)
 
