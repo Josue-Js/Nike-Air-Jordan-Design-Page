@@ -143,13 +143,100 @@
 }
 
 .container main .shoe3d {
+    position: relative;
     width: 100%;
     flex: 1;
     flex-shrink: 1;
     max-width: 900px;
     height: calc(59vw - 3rem);
     max-height: 564px;
+    z-index: -1;
 }
+
+.container main .shoe3d .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+.container main .shoe3d .loading h1 {
+    font-family:  'Saira Condensed';
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+}
+.container main .shoe3d .loading .dots {
+    display: inline-flex;
+}
+.container main .shoe3d .loading .dots--animate .dot.z {
+    animation: scale 0.8s 0.2s forwards;
+}
+.container main .shoe3d .loading .dots--animate .dot.f, .dots--animate .dot.s {
+    animation: right 0.5s forwards;
+}
+.container main .shoe3d .loading .dots--animate .dot.l {
+    animation: rightDown 0.4s 0.1s forwards linear, drop 2s 0.4s forwards linear;
+}
+.container main .shoe3d .loading .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #212121;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 6px;
+}
+.container main .shoe3d .loading .dot.z {
+    position: absolute;
+    transform: scale(0);
+}
+@keyframes scale {
+    100% {
+        transform: scale(1);
+   }
+}
+.container main .shoe3d .loading .dot.f, .dot.s {
+    transform: translateX(0px);
+}
+@keyframes right {
+    100% {
+        transform: translateX(16px);
+   }
+}
+.container main .shoe3d .loading .dot.t {
+    background: transparent;
+}
+.container main .shoe3d .loading .dot .l {
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@keyframes rightDown {
+    50% {
+        top: 4px;
+        left: 16px;
+   }
+    100% {
+        top: 12px;
+        left: 24px;
+   }
+}
+@keyframes drop {
+    100% {
+        transform: translate(70px, calc(35px + (100vh/2)));
+   }
+}
+
 
 /* MEDIA-SOCIAL
 ---------------------------------------------- */
@@ -319,6 +406,10 @@
     .container main .shoe-details p {
         font-size: 1.25rem;
         width: 600px;
+    }
+
+    .container main .shoe3d .loading h1 {
+        font-size: 3rem;
     }
 
     .footer {

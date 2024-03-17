@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { stopAnimation } from './script.js';
 
 
 const shoe3d = document.querySelector('.shoe3d');
@@ -58,6 +59,8 @@ loader.load('./3d/air-jordan.glb', function (gltf) {
 
   const model = gltf.scene;
   scene.add(model);
+
+  stopAnimation()
 
   model.traverse((node) => {
     if(node.isMesh) {
