@@ -62,14 +62,6 @@ loader.load('./3d/air-jordan.glb', function (gltf) {
 
   stopAnimation()
 
-  model.traverse((node) => {
-    if(node.isMesh) {
-      node.castShadow = true
-    }
-  })
-
-
-
 }, undefined, function (error) {
   console.error(error);
 });

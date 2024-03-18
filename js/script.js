@@ -4,7 +4,7 @@ const navBar = document.querySelector('.navbar');
 const dots = document.querySelector('.dots');
 const loading = document.querySelector('.loading');
 
-const isLoading3d = true;
+var isLoading3d = true;
 
 navBar.addEventListener('click', (event) => {
   if (event.target === event.currentTarget) {
