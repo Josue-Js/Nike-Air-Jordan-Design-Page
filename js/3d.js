@@ -14,6 +14,7 @@ const renderer = new THREE.WebGLRenderer({
 const camera = new THREE.PerspectiveCamera(47, shoe3d.clientWidth / shoe3d.clientHeight, 0.1, 1000);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.autoRotate = true;
+controls.rotate = 180
 
 
 
@@ -61,7 +62,6 @@ loader.load('./3d/air-jordan.glb', function (gltf) {
   scene.add(model);
 
   stopAnimation()
-
 }, undefined, function (error) {
   console.error(error);
 });

@@ -1,7 +1,7 @@
 
 const menuIcon = document.querySelector('.menu');
 const navBar = document.querySelector('.navbar');
-const dots = document.querySelector('.dots');
+const imgPreview = document.querySelector('.preview');
 const loading = document.querySelector('.loading');
 
 var isLoading3d = true;
@@ -24,23 +24,11 @@ menuIcon.addEventListener('click', (event) => {
 
 function stopAnimation(){
   isLoading3d = false;
-  loading.remove();
-}
-
-
-function animate(element, className) {
-  element.classList.add(className);
-  setTimeout(() => {
-    element.classList.remove(className);
-    setTimeout(() => {
-      animate(element, className);
-    }, 500);
-  }, 2500);
+  imgPreview.remove();
 }
 
 
 
-animate(dots, "dots--animate");
 
 
 
