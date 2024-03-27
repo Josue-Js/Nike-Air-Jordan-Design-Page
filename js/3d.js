@@ -59,9 +59,9 @@ controls.addEventListener('change', function () {
 loader.load('./3d/air-jordan.glb', function (gltf) {
 
   const model = gltf.scene;
-  scene.add(model);
+  // scene.add(model);
 
-  stopAnimation()
+  // stopAnimation()
 }, undefined, function (error) {
   console.error(error);
 });
