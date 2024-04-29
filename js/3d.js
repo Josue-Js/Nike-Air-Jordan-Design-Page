@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import { stopAnimation } from './script.js';
+import { removeImage } from './script.js';
 
 
 const shoe3d = document.querySelector('.shoe3d');
@@ -49,7 +49,7 @@ window.addEventListener('resize', () => {
 // look controls
 controls.maxDistance = controls.minDistance = 25;
 controls.addEventListener('change', function () {
-  this.target.y = 6 ;
+  this.target.y = 6;
   camera.position.y = 6;
 });
 
@@ -59,9 +59,9 @@ controls.addEventListener('change', function () {
 loader.load('./3d/air-jordan.glb', function (gltf) {
 
   const model = gltf.scene;
-  // scene.add(model);
+  scene.add(model);
+  removeImage()
 
-  // stopAnimation()
 }, undefined, function (error) {
   console.error(error);
 });

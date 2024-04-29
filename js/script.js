@@ -1,8 +1,7 @@
-
 const menuIcon = document.querySelector('.menu');
 const navBar = document.querySelector('.navbar');
 const imgPreview = document.querySelector('.preview');
-const loading = document.querySelector('.loading');
+
 
 var isLoading3d = true;
 
@@ -22,15 +21,9 @@ menuIcon.addEventListener('click', (event) => {
 });
 
 
-function stopAnimation(){
+function removeImage() {
   isLoading3d = false;
   imgPreview.remove();
 }
 
-
-
-
-
-
-
-export { stopAnimation }
+export { removeImage }
